@@ -8,17 +8,8 @@ class Transaction {
     calculateCommission() {
         return this.amount * 0.05;
     }
-    calculate() {
-        let commissionAmount = this.calculateCommission();
-        return {
-            fromClient: this.fromClient,
-            toClient: this.toClient,
-            amount: this.amount,
-            commissionAmount: commissionAmount
-        }
-    }
 }
 
 let user = new Transaction("Mirkamil", "Nurlan", 5000)
-let result = user.calculate();
+let result = user.calculateCommission();
 console.log(result);
